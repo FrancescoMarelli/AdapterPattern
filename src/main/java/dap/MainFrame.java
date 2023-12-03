@@ -8,7 +8,7 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         // Configuración del JFrame
         setTitle("Selector de Implementación");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(300, 150);
         setResizable(false);
         setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
@@ -21,12 +21,12 @@ public class MainFrame extends JFrame {
         // Configuración de acciones para los botones
         listaButton.addActionListener(e -> {
             arrayImplementation = new ListAdapter(new ArrayList<>());
-            openOperationsFrame();
+            openOperationsFrame(arrayImplementation);
         });
 
         miArrayButton.addActionListener(e -> {
             arrayImplementation = new MiArray();
-            openOperationsFrame();
+            openOperationsFrame(arrayImplementation);
         });
 
         // Añadir componentes al JFrame
@@ -51,17 +51,16 @@ public class MainFrame extends JFrame {
         return button;
     }
 
-    private void openOperationsFrame() {
+    private void openOperationsFrame(IArray arrayImplementation) {
         // Crear la segunda ventana para operaciones
-        JFrame operationsFrame = new JFrame("Operaciones con Array");
+        JFrame operationsFrame = new JFrame("Operaciones con " + arrayImplementation.getClass().getSimpleName() );
         operationsFrame.setSize(400, 300);
         operationsFrame.setLayout(new BorderLayout()); // Cambiar el layout a BorderLayout
         operationsFrame.setLocationRelativeTo(null); // Centrar la ventana en la pantalla
-        // Crear panel para los botones
+        // Crear panel para los botones (métodos)
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(3, 3, 10, 10)); // GridLayout para los botones
 
-        // Componentes para operaciones
         JButton addButton = new JButton("Añadir Elemento");
         JButton removeButton = new JButton("Eliminar Elemento");
         JButton clearButton = new JButton("Limpiar Array");
@@ -81,6 +80,7 @@ public class MainFrame extends JFrame {
         buttonPanel.add(getLastButton);
         buttonPanel.add(viewAllButton);
 
+        // Crear panel para el resultado
         JTextArea resultTextArea = new JTextArea(4, 20); // Ajustar el número de filas y columnas
         resultTextArea.setEditable(false);
         resultTextArea.setFont(new Font("Roboto", Font.PLAIN, 12)); // Ajustar el tamaño de la fuente
@@ -157,8 +157,9 @@ public class MainFrame extends JFrame {
             if (arrayImplementation != null) {
                 resultTextArea.setText("Contenido del array:\n");
                 for (int i = 0; i < arrayImplementation.tamano(); ++i) {
-                    resultTextArea.append(arrayImplementation.devolverPosicion(i) + "\n");
+                    resultTextArea.append(arrayImplementation.devolverPosicion(i) + " ");
                 }
+                resultTextArea.append("\n");
             }
         });
 

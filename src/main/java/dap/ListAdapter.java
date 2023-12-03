@@ -19,7 +19,9 @@ public class ListAdapter implements IArray {
 
     @Override
     public void vaciar() {
-        lista.clear();
+        if (!lista.isEmpty()) {
+            lista.clear();
+        }
     }
 
     @Override

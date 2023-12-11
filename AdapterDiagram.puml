@@ -1,0 +1,41 @@
+@startuml
+package main.java.dap {
+class ListAdapter {
+- List<Integer> lista
++ void anadir(int)
++ void eliminar(int)
++ void vaciar()
++ boolean esVacio()
++ int tamano()
++ int primero()
++ int ultimo()
++ int devolverPosicion(int)
+}
+interface IArray {
++ void anadir(int)
++ void eliminar(int)
++ void vaciar()
++ boolean esVacio()
++ int tamano()
++ int primero()
++ int ultimo()
++ int devolverPosicion(int)
+}
+class MiArray {
+- int[] v
+- int tam
++ void anadir(int)
++ void eliminar(int)
++ void vaciar()
++ boolean esVacio()
++ int tamano()
++ int primero()
++ int ultimo()
++ int devolverPosicion(int)
+}
+
+
+IArray <|.. ListAdapter
+IArray <|.. MiArray
+}
+@enduml

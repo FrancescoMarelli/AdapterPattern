@@ -1,0 +1,52 @@
+@startuml
+
+package java.dap{
+class ListAdapter{
+- List<Integer> lista
++ void anadir(int)
++ void eliminar(int)
++ void vaciar()
++ boolean esVacio()
++ int tamano()
++ int primero()
++ int ultimo()
++ int devolverPosicion(int)
+}
+interface IArray {
++ void anadir(int)
++ void eliminar(int)
++ void vaciar()
++ boolean esVacio()
++ int tamano()
++ int primero()
++ int ultimo()
++ int devolverPosicion(int)
+}
+class MiArray{
+- int[] v
+- int tam
++ void anadir(int)
++ void eliminar(int)
++ void vaciar()
++ boolean esVacio()
++ int tamano()
++ int primero()
++ int ultimo()
++ int devolverPosicion(int)
+}
+}
+package GUI {
+class MainFrame implements JFrame {
+- IArray arrayImplementation
+- JButton createStyledButton(String)
+- void openOperationsFrame(IArray)
+}
+}
+class Main {
++ {static} void main(String[])
+}
+Main -- MainFrame
+MainFrame - IArray
+IArray ...|> ListAdapter
+IArray ...|> MiArray
+@enduml

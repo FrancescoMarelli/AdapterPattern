@@ -1,3 +1,5 @@
+package dap;
+
 public class MiArray implements IArray {
 	private int[] v;
 	private int tam;

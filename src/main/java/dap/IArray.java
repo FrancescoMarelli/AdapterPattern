@@ -1,3 +1,5 @@
+package dap;
+
 public interface IArray {
 	public void anadir(int valor);
 	public void eliminar (int posicion);

@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="236cd506-3fc3-47cd-8619-61b8a515e0db" name="Changes" comment="workspace">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dap/IArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dap/IArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dap/ListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dap/ListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dap/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dap/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dap/MiArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dap/MiArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +38,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Maven.DAP-Practica8 [clean].executor": "Run",
+    "Maven.DAP-Practica8 [compile].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",

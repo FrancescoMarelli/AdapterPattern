@@ -16,7 +16,7 @@ public class ListAdapter implements IArray {
 
     @Override
     public void eliminar(int posicion) {
-        if (posicion >= 0 && posicion < lista.size()) {
+        if (posicion >= 0 && posicion <= lista.size()) {
             lista.remove(posicion);
         } else {
             throw new IndexOutOfBoundsException("Posición fuera de rango.");
